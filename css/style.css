@@ -1,0 +1,585 @@
+@charset "utf-8";
+/*reset*/
+* { box-sizing: border-box;}
+html, body{
+          width:100%;
+          height:100%;
+          margin:0;
+          padding:0;
+          font-size:10px;
+          font-family:'Noto Sans KR', sans-serif, "맑은 고딕","Malgun Gothic";font-weight: 400;
+        }
+
+div,dl,dd,dt,h1,h2,h3,h4,h5,h6,p,form,fieldset,select{margin:0;padding:0}  
+header,footer,section,article,address,nav{display: block;margin:0;padding:0;}    
+ul,ol{list-style:none;margin:0;padding:0;} 
+i,em,address{font-style: normal;}   
+table{border-collapse: collapse;table-layout: fixed;}
+a{text-decoration: none;color: #444444;}
+button{background: none;border: none;margin:0;padding: 0;}
+
+/* 최상단 */
+.top{
+  overflow: hidden;
+  margin-top: 5px;
+  width: 100%;
+  height: 60px;
+  }
+.top_left p,h1{float: left;}
+/* 햄버거와 로고 */
+.top_left p img{
+  margin: 10px 10px 0 15px;
+  height: 20px;}
+.top_left h1 img{height: 31px;}
+/* 사용자 아이콘_3종 */
+.top_right{float: right;}
+.top_right li{
+  float: left;
+  margin: 10px;
+  }
+.top_right li img{height: 19px;}
+
+/* 장바구니 */
+.top_right .bag{
+  position: relative;
+  width:20px;
+  height:20px;
+  background: url(/sidmul/image/bag.png)no-repeat 0 0/20px;
+  }
+.top_right ul .bag a{
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(/sidmul/image/bag.png) no-repeat 20px 20px;
+}
+/* 장바구니 숫자 */
+.bag_count{     
+position: absolute;     
+bottom: -3px;     
+right: -5px;  
+width: 12px;     
+height: 12px;   
+border-radius: 50%;   
+background:#95c046; 
+color: #fff;      
+font-size: 0.6rem;     
+line-height: 12px;   
+text-align: center;  
+}
+
+/* 메뉴 네비 */
+.menu{
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  height: 46px;
+  
+  }
+.menu ul{margin: 0 15px;}
+.menu ul li{
+  display: inline-block;
+  padding-right: 27px;
+  font-size: 1.4rem;}
+
+/*id=container  */
+/* 메인롤링 */
+.main_inner{
+  width: calc(100% - 15px);
+  margin-left: 15px;
+  white-space: nowrap;
+  overflow-x:auto;
+  }
+.main_inner ol{float: left;}
+.main_inner ol li{display: inline-block;width: calc(100% - 15px);}
+.main_inner ol li img{width: 100%;}
+
+/* 스크롤 바 */
+.main_inner::-webkit-scrollbar{height:10px;}
+.main_inner::-webkit-scrollbar-track{background-color:#f1f1f1; }
+.main_inner::-webkit-scrollbar-thumb{background:#dbeeb9; border-radius:10px; border:2px solid #f1f1f1}
+/* 서브롤링 */
+/* 띠배너/페이코 */
+.sub_tie{
+  width: calc(100% - 15px);
+  margin: 20px 0 0 15px;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x:auto;
+  }
+.sub_tie ol{float: left;}
+.sub_tie ol li{display: inline-block;width: calc(100% - 15px);}
+.sub_tie ol li img{width: 100%;}
+/* 롤링 동그라미 5종 */
+.roll_circle{width:100%;
+  height: 80px;
+  margin: 20px auto 0;
+  text-align: center;}
+.roll_circle span{
+  background: #b4b4b4;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-right: 3px;
+  display: inline-block;
+  }
+.roll_circle .on{background: #95c046;}
+
+/* --------상품 전체 적용------------ */
+/* 제목 */
+.list .title{height: 30px;
+  width: calc(100% - 20px);
+  overflow: hidden;
+  margin: 20px 0 10px 15px;}
+.list .title>p{float: left;
+  font-size:1.8rem;
+  color:#1d1d1d;
+  font-weight: 700;}
+/* 더보기 버튼 */
+.list .title a{
+  display: block;
+  float: right;
+  color: #787878;
+  /* width: 70px; */
+  height:20px;
+  }
+.list .title a img{height: 9px;}
+/* 상품*/
+.list .prd_wrap ol{
+  width: calc(100% - 15px);
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-left: 15px;
+  }
+.list .prd_wrap ol li{display: inline-block;
+  width: calc(50% - 16px);
+  height: auto;
+  overflow: hidden;}
+/* --상품개별박스-- */
+.list .prd_wrap ol li .product{
+  position: relative;
+  text-align: center;
+  height: auto;
+  background-color: #fff;
+  border: #e2e2e2 solid 1px;
+  }
+/* 상품이미지 */
+.list .prd_wrap ol li .product a img{max-width: 100%;margin: 0 auto;}
+/* 찜하기 */
+.list .prd_wrap ol li .product span{position: absolute;
+  top: 2%;right: 2%;}
+.list .prd_wrap ol li .product span img{width: 40px;height: 20px;}
+/* --상품정보-- */
+.list .prd_wrap ol li .info{height: 70px;}
+/* 가격 */
+.price{color: #444444;font-size: 1.2rem;}
+/* 1+1 */
+.dum{background-color: #ff4747;
+  color: #fff;
+  width: 30px;height: 12px;
+  border-radius: 20%;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: inline-block;
+  line-height: 12px;
+  padding-left: 2px;
+  width: 24px;
+  height: 14px;
+}
+/* 상품이름 */
+.name{overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #787878;
+  font-size: 1.4rem;} 
+/* 해시태그 */
+.tag span a{color: #ff5a13;
+  font-size: 1.2rem;}
+/* ----------▲ 전체적용 ▲------------ */
+
+/* ----------▼ 개별적용 ▼------------ */
+/* 2. 가장 사랑 받는 제품_네비 */
+.loved .tab{
+  margin: 0 0 20px 15px;
+  height: 40px;}
+.loved .tab ul{float: left;}
+.loved .tab ul li{
+  display: inline-block;
+  padding-right: 18px;
+  font-size:1.4rem;}
+.loved .tab ul .on{font-weight: 700;}
+/* ----------▲ 개별적용 ▲------------ */
+
+/*띠고정배너01~03_전체적용 */
+.fix_banner{
+  display: block;
+  margin: 60px 0 60px;}
+.fix_banner a{height: 128px;}
+.fix_banner img{width: 100%;}
+
+/* 3. 이벤트상품 */
+.evnt_prdt{
+  overflow: hidden;
+  width: calc(100% - 30px);
+  height: 700px;
+  margin: 0 15px 60px;
+  }
+.evnt_prdt .title_bundle{
+  overflow: hidden;
+  width: 100%;
+  }
+.evnt_prdt .title_bundle p{
+  float: left;
+  color:#1d1d1d;
+  font-size:1.8rem;
+  font-weight: 700;}
+
+/* 더보기 버튼 */
+.evnt_prdt .title_bundle a{
+  overflow: hidden;
+  float: right;
+  height:20px;
+  color: #787878;
+  }
+.evnt_prdt .title_bundle a img{height: 9px;}
+/* 한정수량 1+1 상품 */
+.evnt_prdt .title p:last-child{
+color:#787878;
+font-weight: 400;
+font-size: 1.2rem;}
+
+.evt_wrp4{
+  overflow: hidden;
+  margin: 10px 0 0;}
+
+.evt_product ul li{
+  display: block;
+  height: 150px;
+  margin-bottom:10px;
+  }
+/* 상품 */
+.left_box{
+  float: left;
+  position: relative;
+  height: 150px;
+  width:128px;
+  border: #f0f0f0 1px solid;
+  }
+.left_box a{
+  width: 100px;
+  height: 135px;}
+.left_box img{
+  position: absolute;
+  top:50%;left:8px;
+  transform: translate(0,-50%);
+  height: 135px;
+  }
+.right_box{
+  float: left;
+  position: relative;
+  width: calc(100% - 128px);
+  height: 150px;
+  background-color:#f0f0f0;
+  }
+
+/* 찜하기 */
+.right_box .off{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  }
+.right_box .off img{
+  width: 40px;
+  height: 20px;}
+
+/* 상품명 가격 정보 */
+.evt_info{
+  position: absolute;
+  top: 50%;left:10px;
+  transform: translate(0,-50%);
+  width: 130px;
+  height: 75px;
+}
+.evt_info .dum, strong, b{display: block;}
+.evt_info strong{
+  color: #181818;
+  font-size: 1.4rem;}
+.evt_info strong span{
+  color: #b4b4b4;
+  font-size: 1.2rem;
+  font-weight:400 ;
+  text-decoration: line-through;}
+.evt_info b{
+  color: #444444;
+  font-weight:400;
+  font-size: 1.4rem;}
+
+/* 풀배너_블루 */
+.full{
+  position: relative;
+  margin-bottom: 40px;}
+.full img{
+  width: 100%;
+  }
+.full .text_box{
+  position: absolute;
+  width: calc(100% - 35px);
+  bottom: 0;
+  padding: 10px;
+  background: #fff;
+  }
+.full .text_box h2{
+  color: #444444;
+  font-size: 2.1rem;}
+.full .text_box p{
+  color: #787878;
+  font-size:1.2rem;
+  }
+.full .text_box h2, .text_box p{margin-left: 15px;}
+
+/* 시리즈 */
+.series{
+  width: calc(100% - 15px);
+  height: 410px;
+  margin: 0 0 60px 15px;
+  }
+.series>p{
+  float: left;
+  margin-bottom: 10px;
+  color:#1d1d1d;
+  font-size:1.8rem;
+  font-weight: 700;}
+.s_rolling ol li img{height: 389px;}
+.s_rolling{
+  overflow-x:auto;
+  white-space: nowrap;
+  width: 100%;
+  height: 400px;
+  }
+.s_rolling ol{float: left;}
+.s_rolling ol li{
+  display: inline-block;
+  position: relative;}
+.s_rolling ol li img{height: 389px;}
+.s_rolling ol li a{height: 388px;}
+.s_rolling ol li .sr_text{
+  position: absolute;
+  bottom:3%;
+  left:3%;
+  color: #fff;}
+.s_rolling ol li .sr_text p:last-child{font: 700 26px "Noto Sans KR";}
+
+/* 2)닥터트럽 폰트색상 변경 */
+.s_rolling ol li:nth-child(2) p{color: #444444;}
+
+/* 5.트러블 상품 */
+/* 서브 2종 배너*/
+.sub_two{display: flex;
+  overflow: hidden;
+  width: 100%;
+  margin: 60px 0 60px 0;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  }
+.sub_two .report,.animal{
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+.sub_two .report img{
+  width: 100%;
+  height: auto;}
+.sub_two .animal img{width: 100%;}
+.sub_two .report .read{
+  position: absolute;
+  width: 150px;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #444444;
+  text-align: center;
+  }
+.sub_two .animal .read{
+  position: absolute;
+  top:50%;right: 10%;
+  transform: translate(0,-50%);
+  text-align: left;}
+.sub_two .read .small{font-size: 0.8rem;}
+.sub_two .report .read a .seemore{
+  display: block;
+  width: 70px;
+  padding: 3px;
+  margin:15px auto;
+  border: 1px solid #444444;
+  color:#444444;
+  }
+
+.sub_two .animal .read a .seemore{
+  display: block;
+  width: 70px;
+  padding: 3px;
+  margin:15px 0;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;}
+
+/* 베스트후기 */
+/* 제목 */
+.review>p{
+  margin: 0 0 20px 15px;
+  color:#1d1d1d;
+  font-size:1.8rem;
+  font-weight: 700;
+  }
+.review_all ul{
+  overflow-x: auto;
+  white-space: nowrap;
+  width: calc(100%  - 15px);
+  margin: 0 0 60px 15px;
+  }
+.review_all ul li{
+  display: inline-block;
+  width: calc(100% - 30px);
+  }
+.review_all ul li .user_bg{
+  position: relative;
+  width: 100%;
+  padding-top: 59.259%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  }
+
+/* 후기콘텐츠(사진+텍스트 */
+.user_cont{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 200px;
+  text-align: center;
+  }
+
+  /* 상품동그라미 */
+.review_all .buy_target{
+  position: relative;
+  width: 100px;
+  height:100px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #fff;
+  }
+.buy_target a{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  }
+.buy_target img{
+  height: 75px;
+  border-radius: 50%;}
+
+/* 후기 글 */
+.buy_text p{
+  overflow: hidden;
+  white-space: nowrap;
+  color: #fff;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  }
+
+/* 인스타그램 */
+.sidmool_insta .title_ins{
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;}
+.sidmool_insta .title_ins a{
+  display: block;
+  color: #787878;
+  font-size:1.2rem;
+  }
+.sidmool_insta ul{
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  }
+.sidmool_insta ul li{
+  float: left; 
+  width: calc(100%/3 - 4px);
+  margin: 0 2px;}
+.sidmool_insta ul li img{width: 100%;}
+
+/* 브랜드스토리 */
+.brand{overflow: hidden;width: 100%;position: relative;margin-top: 60px;}
+.brand img{width:100%;}
+.brand .see{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 250px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  }
+.brand .see p:nth-child(2){font-size: 2.4rem;}
+.brand .see a{
+  display: inline-block;
+  width:90px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background:#95c046;
+  color: #fff;
+  }
+
+/* 하단 */
+footer{background-color:  #d7d7d7;}
+.foot_bg{
+  width: 100%;
+  margin-top: 30px;
+  }
+/* 공지/문의/계좌 3종 */
+.ft_list_all{
+  overflow: hidden;
+  padding-top: 20px;
+  margin: 0 15px 20px;
+  color:#444444;
+  font-size: 1.4rem;
+}
+.ft_list_all > div{
+  height: 45px; 
+  margin-top: 20px; 
+  border-bottom: 1px solid #fff;
+  line-height: 45px; 
+  }
+.ft_list_all strong{float: left;}
+.ft_list_all a{float: right;}
+
+/* sns 아이콘 */
+.sns ul{
+  overflow: hidden;
+  float: right;
+  }
+.sns ul li{float: left;}
+.sns ul li img{
+  height: 31px;
+  margin-right: 6px;}
+/* 카피라이트 */
+.copy{
+  margin-left:15px;
+  padding-bottom: 20px;
+  font-size: 0.9rem;}
+.copy strong img{
+  display: inline-block;
+  height: 31px;}
+.copy ul li{
+  display: inline-block;
+  padding: 10px 10px 20px 0px;}
+.copy ul li a, .company{color: #808080;}
+.copy .company{font-family:'Noto Sans KR', sans-serif, "맑은 고딕","Malgun Gothic";
+  font-weight: 300;}
+.copy>p{margin-top: 20px;}

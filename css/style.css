@@ -44,13 +44,13 @@ button{background: none;border: none;margin:0;padding: 0;}
   position: relative;
   width:20px;
   height:20px;
-  background: url(/sidmul/image/bag.png)no-repeat 0 0/20px;
+  background: url(/sidmul_m/image/bag.png)no-repeat 0 0/20px;
   }
 .top_right ul .bag a{
   display: block;
   width: 20px;
   height: 20px;
-  background: url(/sidmul/image/bag.png) no-repeat 20px 20px;
+  background: url(/sidmul_m/image/bag.png) no-repeat 20px 20px;
 }
 /* 장바구니 숫자 */
 .bag_count{     
@@ -97,7 +97,13 @@ text-align: center;
 /* 스크롤 바 */
 .main_inner::-webkit-scrollbar{height:10px;}
 .main_inner::-webkit-scrollbar-track{background-color:#f1f1f1; }
-.main_inner::-webkit-scrollbar-thumb{background:#dbeeb9; border-radius:10px; border:2px solid #f1f1f1}
+.main_inner::-webkit-scrollbar-thumb{
+  background:#dbeeb9; 
+  border-radius:10px; 
+  border:2px solid #f1f1f1}
+
+
+
 /* 서브롤링 */
 /* 띠배너/페이코 */
 .sub_tie{
@@ -107,10 +113,25 @@ text-align: center;
   overflow-y: hidden;
   overflow-x:auto;
   }
-.sub_tie ol{float: left;}
-.sub_tie ol li{display: inline-block;width: calc(100% - 15px);}
+.sub_tie ol li{display: inline-block;}
 .sub_tie ol li img{width: 100%;}
-/* 롤링 동그라미 5종 */
+/* 롤링 동그라미 */
+.slick-dots{
+  text-align: center;
+}
+.slick-dots li{
+margin: 0 3.5px;
+}
+.slick-dots li button{
+display: inline-block;
+width:10px ;
+height: 10px;
+border-radius: 50%;
+background:#b4b4b4;
+font-size:0
+}
+.slick-dots li.slick-active button{background:  #95c046;}
+
 .roll_circle{width:100%;
   height: 80px;
   margin: 20px auto 0;
@@ -338,9 +359,9 @@ font-size: 1.2rem;}
 .full .text_box h2, .text_box p{margin-left: 15px;}
 
 /* 시리즈 */
+
 .series{
   width: calc(100% - 15px);
-  height: 410px;
   margin: 0 0 60px 15px;
   }
 .series>p{
@@ -349,19 +370,18 @@ font-size: 1.2rem;}
   color:#1d1d1d;
   font-size:1.8rem;
   font-weight: 700;}
-.s_rolling ol li img{height: 389px;}
+
 .s_rolling{
   overflow-x:auto;
   white-space: nowrap;
   width: 100%;
-  height: 400px;
   }
 .s_rolling ol{float: left;}
 .s_rolling ol li{
   display: inline-block;
   position: relative;}
-.s_rolling ol li img{height: 389px;}
-.s_rolling ol li a{height: 388px;}
+.s_rolling ol li img{width: 100%;}
+.s_rolling ol li a{display: block;}
 .s_rolling ol li .sr_text{
   position: absolute;
   bottom:3%;

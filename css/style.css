@@ -44,13 +44,13 @@ button{background: none;border: none;margin:0;padding: 0;}
   position: relative;
   width:20px;
   height:20px;
-  background: url(/sidmul_m/image/bag.png)no-repeat 0 0/20px;
+  background: url(/sidmul-m/image/bag.png)no-repeat 0 0/20px;
   }
 .top_right ul .bag a{
   display: block;
   width: 20px;
   height: 20px;
-  background: url(/sidmul_m/image/bag.png) no-repeat 20px 20px;
+  background: url(/sidmul-m/image/bag.png) no-repeat 20px 20px;
 }
 /* 장바구니 숫자 */
 .bag_count{     
